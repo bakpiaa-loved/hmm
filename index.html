@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>galauu??</title>
+  <title>lonely</title>
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -12,69 +12,42 @@
       background: #000;
       font-family: 'Patrick Hand', cursive;
       color: #eee;
-      overflow: hidden;
+      overflow-x: hidden;
     }
-    header, footer {
+    h1, h2 {
       text-align: center;
-      padding: 30px;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    h1 {
-      font-size: 3em;
-    }
-    p {
-      font-size: 1.2em;
-      margin: 0 10px;
+      margin: 20px 0;
     }
     .playlist {
       max-width: 600px;
-      margin: 30px auto;
+      margin: 20px auto;
       background: rgba(255, 255, 255, 0.05);
       padding: 20px;
       border-radius: 15px;
     }
     .playlist audio {
-      margin-bottom: 15px;
       width: 100%;
+      margin-bottom: 10px;
     }
     .title {
-      font-size: 1.5em;
+      font-size: 1.2em;
+      margin: 10px 0 5px;
       color: #fff;
-      text-align: center;
-      margin-bottom: 15px;
     }
     .stars {
       position: fixed;
-      width: 100%;
-      height: 100%;
       top: 0;
       left: 0;
-      z-index: -2;
+      width: 100%;
+      height: 100%;
       background: radial-gradient(white 2px, transparent 2px);
       background-size: 20px 20px;
-      animation: starsAnim 200s linear infinite;
+      animation: starsAnim 150s linear infinite;
+      z-index: -2;
     }
     @keyframes starsAnim {
       from { background-position: 0 0; }
       to { background-position: 2000px 2000px; }
-    }
-    .popup {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 20px;
-      border-radius: 15px;
-      max-width: 280px;
-      z-index: 999;
-      display: none;
-      animation: fadeIn 2s ease-in-out;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
     }
     .overlay {
       position: fixed;
@@ -83,98 +56,99 @@
       width: 100%;
       height: 100%;
       background: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/rain-1837380_1280.png') repeat;
-      opacity: 0.05;
+      opacity: 0.03;
       pointer-events: none;
       z-index: -1;
     }
-    .fog {
+    .popup {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 200%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%);
-      animation: fogAnim 60s linear infinite;
-      z-index: -3;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 300px;
+      font-size: 1em;
+      animation: fadeIn 3s ease-in-out infinite alternate;
+      z-index: 10;
     }
-    @keyframes fogAnim {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    @keyframes fadeIn {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+    .watermark {
+      position: fixed;
+      bottom: 5px;
+      right: 10px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.2);
+      font-family: 'Patrick Hand', cursive;
+      transform: rotate(-10deg);
+      z-index: 0;
     }
   </style>
 </head>
 <body>
   <div class="stars"></div>
   <div class="overlay"></div>
-  <div class="fog"></div>
 
-  <div class="popup" id="popup1">"Sunyi tak butuh suara. Ia hanya menunggu yang pernah pulang."</div>
-  <div class="popup" id="popup2">"Aku tak mencari siapa pun lagi. Aku hanya ingin diam, dengan perasaanku."</div>
-  <div class="popup" id="popup3">"Tak apa hancur. Setidaknya pernah penuh."</div>
+  <div class="popup">"Sunyi tak butuh suara. Ia hanya menunggu yang pernah pulang."</div>
 
-  <header>
-    <h1> ۫ ૮꒰ ˶• ˕ •˶ ꒱ა ִ</h1>
-    <p>Karena kadang kita hanya ingin larut dalam gelap tanpa ditanya kenapa.</p>
-  </header>
+  <h1>𝆹 ૮꒰ ˶• ˕ •˶ ꒱ა 𝆹</h1>
+  <h2>Temani malam gelapmu dengan suara yang paham rasa</h2>
 
-  <section class="playlist">
-    <h2>Playlist Galau</h2>
-    <div class="title">Alone - Samir Ahmed</div>
-    <audio controls autoplay>
-      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Samir_Ahmed/Alone/Samir_Ahmed_-_01_-_Alone.mp3" type="audio/mp3">
-    </audio>
-    <div class="title">The Loss of You - Scott Holmes</div>
+  <div class="playlist">
+    <div class="title">Alone - Rymdklang Soundtracks</div>
     <audio controls>
-      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Scott_Holmes/Emotion/Scott_Holmes_-_02_-_The_Loss_Of_You.mp3" type="audio/mp3">
+      <source src="https://cdn.pixabay.com/download/audio/2022/03/24/audio_7a6dfc197d.mp3?filename=alone-112232.mp3" type="audio/mp3">
     </audio>
-    <div class="title">Only Whispers - Josh Woodward</div>
-    <audio controls>
-      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Josh_Woodward/Only_Whispers/Josh_Woodward_-_Only_Whispers.mp3" type="audio/mp3">
-    </audio>
-    <div class="title">Cold Dust - Kai Engel</div>
-    <audio controls>
-      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Kai_Engel/Irsens_Tale/Kai_Engel_-_04_-_Cold_Dust.mp3" type="audio/mp3">
-    </audio>
-    <div class="title">Sad Birds - Monplaisir</div>
-    <audio controls>
-      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monplaisir/The_Eternal_Spring/Monplaisir_-_06_-_Sad_Birds.mp3" type="audio/mp3">
-    </audio>
-    <div class="title">Empty Head - Komiku</div>
-    <audio controls>
-      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Komiku/Its_time_for_adventure_/Komiku_-_07_-_Empty_Head.mp3" type="audio/mp3">
-    </audio>
-    <div class="title">Wait for the Night - Lobo Loco</div>
-    <audio controls>
-      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Lobo_Loco/Sweet_Music/Lobo_Loco_-_02_-_Wait_for_the_Night_ID_1225.mp3" type="audio/mp3">
-    </audio>
-    <div class="title">Lonely Forest - Komiku</div>
-    <audio controls>
-      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Komiku/Its_time_for_adventure_/Komiku_-_08_-_Lonely_Forest.mp3" type="audio/mp3">
-    </audio>
-  </section>
 
-  <footer>
-    <p>&copy; bakpiaa — Ruang Galau. Semua perasaan valid. Biarkan malam memelukmu, anjay.</p>
-  </footer>
+    <div class="title">Sad Piano - Keys of Moon</div>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_c03c8d9e2e.mp3?filename=sad-piano-8401.mp3" type="audio/mp3">
+    </audio>
 
-  <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/03/27/audio_81d26d967e.mp3?filename=rain-sound-ambient-143135.mp3" type="audio/mpeg">
-  </audio>
+    <div class="title">Lost Emotions - Nomyn</div>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2021/11/02/audio_c2b5c191f2.mp3?filename=lost-emotions-9831.mp3" type="audio/mp3">
+    </audio>
 
-  <script>
-    const popups = [
-      document.getElementById('popup1'),
-      document.getElementById('popup2'),
-      document.getElementById('popup3')
-    ];
-    let index = 0;
-    function showNextPopup() {
-      popups.forEach(p => p.style.display = 'none');
-      popups[index].style.display = 'block';
-      index = (index + 1) % popups.length;
-    }
-    setInterval(showNextPopup, 15000);
-    showNextPopup();
-  </script>
+    <div class="title">Falling Stars - Darren Curtis</div>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2022/07/08/audio_11bc67b86c.mp3?filename=falling-stars-113418.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="title">Rainy Days - Ashot-Danielyan-Composer</div>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2022/01/24/audio_09ff39e7cf.mp3?filename=rainy-days-104303.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="title">La La Lost You (Cover Instrumental)</div>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2023/10/05/audio_7d94b3db52.mp3?filename=melancholy-piano-melody-177021.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="title">Slice of Paradise</div>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_d26d38b57d.mp3?filename=slice-of-paradise-110379.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="title">Lost Control (Ambient Cover Vibe)</div>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2022/03/14/audio_efc8d63837.mp3?filename=lonely-piano-110827.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="title">Empty Streets</div>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2023/04/27/audio_005b28e054.mp3?filename=emotional-sad-melody-145184.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="title">Gone - Emotional Violin</div>
+    <audio controls>
+      <source src="https://cdn.pixabay.com/download/audio/2022/01/05/audio_235ff2eb0d.mp3?filename=gone-100563.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <div class="watermark">piaaluv ۫ෆ</div>
 </body>
-</html>
+  </html>
